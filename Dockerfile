@@ -1,7 +1,5 @@
 FROM centos
-RUN yum install zip -y
-ADD jdk1.7.0_80.tar.gz /opt
-ENV JAVA_HOME  /opt/jdk1.7.0_80
+RUN yum install java-1.7.0-openjdk.x86_64 zip -y
 RUN mkdir /service
 ADD ai-rec-1.0.0-all.tar.gz /service
 WORKDIR /service
